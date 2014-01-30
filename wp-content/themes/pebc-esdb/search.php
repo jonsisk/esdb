@@ -2,17 +2,23 @@
 
 	<div id="primary" class="content-area">
 		<div id="content" class="site-content" role="main">
-
-		<?php if ( have_posts() ) : ?>
 			<header class="archive-header">
-				<h2 class="archive-title"><?php echo 'Search results for: <strong>' . get_search_query() . '</strong><br>';?></h2>
-				<p>Click on the source to view the full description and text of the statute.<br>
+				<h2 class="archive-title">
+					<?php echo 'There were ' . $wp_query->found_posts . ' results for: <strong class=red>' . get_search_query() . '</strong><br>'; ?>
+				</h2>
+				<?php if ($wp_query->found_posts > '50') {
+					echo '<h2>-- That is a lot of results, you might consider refining your search term(s) --</h2>';
+					}
+					?>
+				
+				<p>Click on the source or subject to view the full description and text of the statute.<br>
 				Click on a tag to show all statues with that tag</p>
 
 				<?php if ( tag_description() ) : // Show an optional tag description ?>
 				<div class="archive-meta"><?php echo tag_description(); ?></div>
 				<?php endif; ?>
 			</header><!-- .archive-header -->
+			<?php if ( have_posts() ) : ?>
 			<div id="sr_index">
 				<div class="sr_title">
 					Source and subject
@@ -61,7 +67,7 @@
 			<?php endwhile; ?>
 			</div>
 		<?php else :
-			echo 'no results';
+			echo '<div style=padding:10px;><h2>Sorry, no results were found for <strong class=red>' . get_search_query() .'</strong></h2></div>';
 			endif; ?>
 		<?php numeric_posts_nav(); ?>
 

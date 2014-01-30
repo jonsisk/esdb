@@ -18,16 +18,16 @@
 			<div id="head_text">
 				<h1>Online <span class=red>Education</span> Statute Database</h1>
 				<ul>
-					<li>Search Colorado education statutes by entering a search term below.</li>
-					<li>For best results, avoid broad terms like "student" and "school."</li>
-					<li>You can also search by selecting a tag from the drop down.</li>
+					<li>Search Colorado education statutes by entering a search term or selecting a tag below.</li>
+					<li>For best results, avoid broad terms like <strong class=red>student</strong> or <strong class=red>school</strong>.</li>
+					<li>You can also put quotes around specific terms you would like to search for like <strong class=red>"school bus"</strong>.</li>
 				</ul>
 				<div style="clear:both"></div>
 			</div>
 			<div class="head_search">
 				Search by term<br>
 				<form method="get" id="searchform" action="<?php bloginfo('home'); ?>/">
-					<input type="text" value="<?php echo wp_specialchars($s, 1); ?>" name="s" id="s" class="head_input" />
+					<input type="text" placeholder="Enter Search Term" value="<?php echo wp_specialchars($s, 1); ?>" name="s" id="s" class="head_input" />
 					<input type="submit" id="searchsubmit" value="SEARCH" class="btn" />
 				</form>
 			</div>
@@ -36,7 +36,7 @@
 				<form method="get" id="tagselect">
 					<div class="head_search_left">
 					<?php $tags = get_tags();
-						$html = '<select name="tag" class="post_tags head_input">';
+						$html = '<select name="tag" placeholder="Select a Tag" class="post_tags head_input"><option></option>';
 						foreach ( $tags as $tag ) {
 						$tag_link = get_tag_link( $tag->term_id );
 						$tag_slug = $tag->slug;

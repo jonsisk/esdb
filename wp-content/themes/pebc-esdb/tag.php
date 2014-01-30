@@ -5,7 +5,7 @@
 
 		<?php if ( have_posts() ) : ?>
 			<header class="archive-header">
-				<h2 class="archive-title">Statutes tagged: <strong><?php echo single_tag_title( '', false ); ?></strong></h2>
+				<h2 class="archive-title"><?php echo 'There are ' . $wp_query->found_posts . ' statutes tagged: <strong class=red>'. single_tag_title( '', false ); ?></strong></h2>
 				<p>Click on the source to view the full description and text of the statute.<br>
 				Click on a tag to show all statues with that tag</p>
 
@@ -62,7 +62,7 @@
 			<?php endwhile; ?>
 			</div>
 		<?php endif; ?>
-
+		<?php numeric_posts_nav(); ?>
 		</div><!-- #content -->
 	</div><!-- #primary -->
 <?php get_footer(); ?>
