@@ -131,7 +131,7 @@ input, select, textarea {
 	color: white;
 	}
 #sr_index {
-	border-bottom: 1px solid #61116a;
+	border-bottom: 3px solid black;
 	padding: 1% 2%;
 	background: #eee;
 	}
@@ -139,6 +139,7 @@ input, select, textarea {
 	width: 96%;
 	clear:both;
 	padding: 2%;
+	border-bottom:1px solid black;
 	}
 .sr:nth-child(even) {
     background: #eeeeee;
