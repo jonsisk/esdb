@@ -12,20 +12,19 @@
 				<?php if ( tag_description() ) : // Show an optional tag description ?>
 				<div class="archive-meta"><?php echo tag_description(); ?></div>
 				<?php endif; ?>
-				<div id="sr_index">
-					<div class="sr_title">
-						Source and subject
-					</div>
-					<div class="sr_excerpt">
-						Abstract
-					</div>
-					<div class="sr_tags">
-						Tags
-					</div>
-				<div style="clear:both;">
-				</div>
 			</header><!-- .archive-header -->
-
+			<div id="sr_index">
+				<div class="sr_title">
+					Source and subject
+				</div>
+				<div class="sr_excerpt">
+					Abstract
+				</div>
+				<div class="sr_tags">
+					Tags
+				</div>
+				<div style="clear:both;"></div>
+			</div>
 			<?php /* The loop */ ?>
 			<div class="srs">
 			<?php while ( have_posts() ) : the_post();

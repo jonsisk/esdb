@@ -12,7 +12,7 @@
 <div id="wrapper">
 	<div id="header">
 		<div id="logo">
-			<img style=width:200px; src="<?php bloginfo('template_url')?>/images/pebc_logo.png" />
+			<a href="/"><img style=width:200px; src="<?php bloginfo('template_url')?>/images/pebc_logo.png" /></a>
 		</div>
 		<div id="header_stripe">
 			<div id="head_text">
@@ -27,12 +27,8 @@
 			<div class="head_search">
 				Search by term<br>
 				<form method="get" id="searchform" action="<?php bloginfo('home'); ?>/">
-					<div class="head_search_left">
-						<input type="text" value="<?php echo wp_specialchars($s, 1); ?>" name="s" id="s" class="head_input" />
-					</div>
-					<div class="head_search_right">
-						<input type="submit" id="searchsubmit" value="SEARCH" class="btn" />
-					</div>
+					<input type="text" value="<?php echo wp_specialchars($s, 1); ?>" name="s" id="s" class="head_input" />
+					<input type="submit" id="searchsubmit" value="SEARCH" class="btn" />
 				</form>
 			</div>
 			<div class="head_search">
@@ -54,10 +50,7 @@
 						echo '</select>';
 					?>
 					</div>
-					
-					<div class="head_search_right">
-						<input type="button" id="tagsubmit" value="SEARCH" class="btn" onClick="window.open(tag.value, '_parent')" />
-					</div>
+					<input type="button" id="tagsubmit" value="SEARCH" class="btn" onClick="window.open(tag.value, '_parent')" />
 				</form>
 			</div>
 			<div style="clear:both"></div>
