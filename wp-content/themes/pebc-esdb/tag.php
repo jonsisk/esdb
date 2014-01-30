@@ -1,14 +1,13 @@
 <?php get_header(); ?>
-
 	<div id="primary" class="content-area">
 		<div id="content" class="site-content" role="main">
-
 		<?php if ( have_posts() ) : ?>
 			<header class="archive-header">
 				<h2 class="archive-title"><?php echo 'There are ' . $wp_query->found_posts . ' statutes tagged: <strong class=red>'. single_tag_title( '', false ); ?></strong></h2>
-				<p>Click on the source to view the full description and text of the statute.<br>
-				Click on a tag to show all statues with that tag</p>
-
+				<ul>
+					<li>Click on the source or subject to view the full description and text of the statute.</li>
+					<li>Click on a tag to show all statues with that tag</li>
+				</ul>
 				<?php if ( tag_description() ) : // Show an optional tag description ?>
 				<div class="archive-meta"><?php echo tag_description(); ?></div>
 				<?php endif; ?>
@@ -44,11 +43,11 @@
 								echo ' - ' . $esdb_aka;
 								}
 							?>
-						</a>
 					</h3>
 				</div>
 				<div class="sr_title">
 					<?php the_title(); ?>
+						</a>
 				</div>
 				<div class="sr_excerpt">
 					<?php the_excerpt(); ?>

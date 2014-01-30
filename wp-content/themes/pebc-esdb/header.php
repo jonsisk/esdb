@@ -1,7 +1,7 @@
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width">
-	<title>PEBC Education Statute Database | <?php the_title(); ?></title>
+	<title><?php the_title();?> | PEBC Education Statute Database</title>
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 	<link rel="stylesheet" href="<?php bloginfo( 'stylesheet_url' ); ?>">
