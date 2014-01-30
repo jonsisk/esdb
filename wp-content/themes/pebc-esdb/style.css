@@ -204,6 +204,7 @@ input, select, textarea {
 
 .navigation li {
 	display: inline;
+	line-height:64px;
 }
 
 .navigation li a,
